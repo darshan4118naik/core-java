@@ -1,7 +1,7 @@
 class OrthoTester{
 	public static void main(String a[]){
 		
-		Orthopedics op = new Orthopedics();
+		OrthopedicsDTO op = new OrthopedicsDTO();
 		op.setName("Physician,Surgeon");
 		op.setSector("Medicine,Surgery");
 		op.setEmploymentField("Hospital,clinic");

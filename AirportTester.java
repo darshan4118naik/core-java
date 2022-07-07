@@ -1,7 +1,7 @@
 class AirportTester{
 	public static void main(String a[]){
 		
-		Airport ap = new Airport();
+		AirportDTO ap = new AirportDTO();
 		ap.setName("Kempegowda International Airport");
 		ap.setLocation("Bengaluru");
 		ap.setType("International");

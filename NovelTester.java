@@ -1,7 +1,7 @@
 class NovelTester{
 	public static void main(String a[]){
 		
-		Novel no = new Novel();
+		NovelDTO no = new NovelDTO();
 		no.setName("2 States");
 		no.setType("Romance comedy");
 		no.setPrice(499);

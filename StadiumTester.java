@@ -1,7 +1,7 @@
 class StadiumTester{
 	public static void main(String a[]){
 		
-		Stadium sd = new Stadium();
+		StadiumDTO sd = new StadiumDTO();
 		sd.setName("Chinnaswamy");
 		sd.setLocation("Bengaluru");
 		sd.setEntryFee(2999);

@@ -1,7 +1,7 @@
 class NewsTester{
 	public static void main(String a[]){
 		
-		Newspaper np = new Newspaper();
+		NewspaperDTO np = new NewspaperDTO();
 		np.setName("Prajavani");
 		np.setType("Daily");
 		np.setPrice(6.50);

@@ -1,7 +1,7 @@
 class BigTester{
 	public static void main(String a[]){
 		
-		BigBasket bb = new BigBasket();
+		BigBasketDTO bb = new BigBasketDTO();
 		bb.setOwnedBy("Tata Digital Limited");
 		bb.setType("Online and offline");
 		bb.setStartedIn(2011);

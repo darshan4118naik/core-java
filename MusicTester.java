@@ -1,7 +1,7 @@
 class MusicTester{
 	public static void main(String a[]){
 		
-		MusicPlayer mp = new MusicPlayer();
+		MusicPlayerDTO mp = new MusicPlayerDTO();
 		mp.setName("Walkman");
 		mp.setType("portable");
 		mp.setPrice(899);

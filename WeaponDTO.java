@@ -1,5 +1,5 @@
-class Weapon{
-	public Weapon(){
+class WeaponDTO{
+	public WeaponDTO(){
 	}
   private String name;
   private String type;
@@ -35,8 +35,6 @@ class Weapon{
 	 }
 	 
 	 
-  public void pistol(){
-	  System.out.println("Entada....shoot madbeka");
-  }
+ 
 	
 }

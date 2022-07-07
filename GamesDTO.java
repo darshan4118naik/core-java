@@ -1,5 +1,5 @@
-class Games{
-	public Games(){
+class GamesDTO{
+	public GamesDTO(){
 	}
   private String name;
   private String type;
@@ -35,8 +35,6 @@ class Games{
 	 }
 	 
 	 
-  public void pubg(){
-	  System.out.println("Iga ban agide");
-  }
+ 
 	
 }

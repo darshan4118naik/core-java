@@ -1,5 +1,5 @@
-class BigBasket{
-	public BigBasket(){
+class BigBasketDTO{
+	public BigBasketDTO(){
 	}
   private String ownedBy;
   private String type;
