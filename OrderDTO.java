@@ -1,9 +1,9 @@
 class OrderDTO
 {
-	int id;
-	String type;
-	String name;
-	int price;
+	private int id;
+	private String type;
+	private String name;
+	private int price;
 	
 	public OrderDTO()
 	{

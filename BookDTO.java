@@ -1,10 +1,10 @@
 class BookDTO
 {
-	int id;
-	String name;
-	String author;
-	String publishedIn;
-	String stream;
+	private int id;
+	private String name;
+	private String author;
+	private String publishedIn;
+	private String stream;
 	
 	
 	public BookDTO()
