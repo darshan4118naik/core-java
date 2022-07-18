@@ -41,4 +41,8 @@ class OrderDTO
 	{
 		this.price=price;
 	}
+	public String toString()
+	{
+		return "[OrderDTO : Id="+this.id+" , Type ="+this.type+"	,Name="+this.name+"	,Price="+this.price+"]";
+	}
 }

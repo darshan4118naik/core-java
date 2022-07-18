@@ -10,12 +10,14 @@ class HospitalTester
 		Hospital hs = new Hospital(size);
 		for(int i=0; i<size;i++)
 		{
+		System.out.print("Enter a Patient ID : ");
+		int iD = sc.nextInt();
 		
 		System.out.print("Enter a Patient Name : ");
 		String name= sc.next();
 		
-		System.out.print("Enter a Patient ID : ");
-		int iD = sc.nextInt();
+		System.out.print("Enter a Patient Gender : ");
+		String gender = sc.next();
 		
 		System.out.print("Enter a Patient Address : ");
 		String address = sc.next();
@@ -26,30 +28,69 @@ class HospitalTester
 		PatientDTO dto1 = new PatientDTO();
 		dto1.setID(iD);
 		dto1.setName(name);
-		//dto1.setGender(Gender.male);
+		dto1.setGender(Gender.valueOf(gender));
 		dto1.setAddress(address);
 		dto1.setContactNo(contactNo);
 		hs.createPatient(dto1);
 				
        }
-	   hs.getPetientDetails();
-	   
-	   System.out.print("Enter the existing Id for update Patient Address : ");
-	   int existingId = sc.nextInt();
-	   System.out.print("Enter the updated Patient Address : ");
-	   String updateAddress=sc.next();
-	   hs.updatePatientAddressById(existingId , updateAddress);
-	   hs.getPetientDetails();
-	   
-	   System.out.print("Enter the existing name for delete patient: ");
-	   String existingName = sc.next();
-	   hs.deletePatientByName(existingName);
-	   hs.getPetientDetails();
-	   
-	    System.out.print("Enter the existing Address for delete patient: ");
-	   String existingAdd = sc.next();
-	  hs.deletePatientByAddress(existingAdd);
-	   hs.getPetientDetails();
+	   String option=null;
+	   do
+	   {
+		  System.out.println("Enter 1 to fetch all the patient details : ");
+		   System.out.println("Enter 2 to update address by Id : ");
+		    System.out.println("Enter 3 to delete Patient By Name : ");
+			 System.out.println("Enter 4 to delete Patient By Address : ");
+			 System.out.println("Enter 5 to delete Patient By Gender : ");
+			 System.out.println("Enter 6 to get patient contactNo by name");
+			System.out.println("Enter 7 to get patient name by id");
+			 int choise = sc.nextInt();
+			 
+			 switch(choise)
+			 {
+				 case 1 : hs.getPetientDetails();
+				          break;
+						  
+				 case 2 : System.out.print("Enter the existing Id for update Patient Address : ");
+	                      int existingId = sc.nextInt();
+	                      System.out.print("Enter the updated Patient Address : ");
+	                      String updateAddress=sc.next();
+	                      hs.updatePatientAddressById(existingId , updateAddress);
+						  break;
+						  
+	   	         case 3 : System.out.print("Enter the existing name for delete patient: ");
+	                      String existingName = sc.next();
+	                      hs.deletePatientByName(existingName);
+						  break;
+	   	  
+		         case 4 : System.out.print("Enter the existing Address for delete patient: ");
+	                      String existingAdd = sc.next();
+	                      hs.deletePatientByAddress(existingAdd);
+						  break;
+				 case 5 : System.out.print("Enter the Gender for delete patient : ");
+	                      String exGender = sc.next();
+	                      hs.deletePatientByGender(Gender.valueOf(exGender));
+						  break;
+
+				 case 6 : System.out.println("enter existing name");
+		             String name1 = sc.next();
+		             ht.getPatientContactNoByName(name1);
+					 break;
+					 
+			     case 7 : System.out.println("enter existing id");
+		             int id1 = sc.nextInt();
+		             ht.getPatientNameById(id1);
+					 break;		  
+						  
+			    default : System.out.print("Wrong option");
+                          break;
+										  
+			 }
+			 System.out.print("Do you continue Y/N : ");		  
+                option= sc.next();
+	   }
+	   while(option.equals("Y"));
+
     }
 }
 		

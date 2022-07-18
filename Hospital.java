@@ -38,7 +38,7 @@ class Hospital
 		for(int i=0; i < dtos.length; i++)
 		
 		
-			System.out.println(dtos[i].getID() +" / "+dtos[i].getName() + " / " +dtos[i].getAddress() /* +" "+dtos[i].getGender()*/+" / " +dtos[i].getContactNo());		
+			System.out.println(dtos[i]);		
 	}
 	public boolean updatePatientAddressById(int id , String address)
 	{
@@ -77,21 +77,81 @@ class Hospital
 	}
 	boolean deletePatientByAddress(String address)
 	{ 
-		boolean deletePatient=false;
+		boolean deletePatient1=false;
 		int i , j;
 		for( i=0,j=0;j<dtos.length;j++)
 		{
 			if(!dtos[j].getAddress().equals(address))
 			{				
 				dtos[i++]=dtos[j];
-				deletePatient=true;
+				deletePatient1=true;
 				System.out.println("Deleted successfully");				
 			}
          						
 		}
-		dtos=Arrays.copyOf(dtos,i);
-		return deletePatient;
+		dtos=Arrays.copyOf(dtos,j);
+		return deletePatient1;
 	}
+	
+/*	String getPatientByGender(Gender gender)
+	{
+		//Gender.valueOf(gender);
+		String getPatient=null;
+		for(int i=0;i<dtos.length;i++){
+		if(dtos[i].getGender().equals(gender))
+		{
+			getPatient=dtos[i].getGender();
+			System.out.println("Type of the Order : "+dtos[i].getGender());
+		}
+		}
+		return getPatient;
+	}*/
+	
+	public String getPatientNameById(int id){
+	 String names=null;
+		for(int i=0;i<dtos.length;i++){
+			if(dtos[i].getID()==id){
+				names=dtos[i].getName();
+				System.out.println(dtos[i].getName());
+			}
+			else{
+				System.out.println("not found");
+			}
+		}
+		return names;
+	}
+	public long getPatientContactNoByName(String name){
+		long patientContNo = 0;
+		for(int i=0;i<dtos.length;i++){
+			if(dtos[i].getName().equals(name)){
+				patientContNo=dtos[i].getContactNo();
+				System.out.println(dtos[i].getContactNo());
+			}
+			else{
+				System.out.println("name not matched");
+			}
+		}
+		return patientContNo;
+	}
+	
+	boolean deletePatientByGender(Gender gender)
+	{ 
+		boolean deletePatientG=false;
+		int i , j;
+		for( i=0,j=0;j<dtos.length;j++)
+		{
+			if(!dtos[j].getGender().equals(gender))
+			{				
+				dtos[i++]=dtos[j];
+				deletePatientG=true;
+				System.out.println("Deleted successfully");				
+			}
+         						
+		}
+		dtos=Arrays.copyOf(dtos,j);
+		return deletePatientG;
+	}
+	
 }
 
 

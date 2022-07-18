@@ -6,6 +6,11 @@ public class PatientDTO
 	private long contactNo;
 	private String address;
 	
+	@Override
+	public int hashCode()
+	{		return this.iD;
+	}
+	
 	public PatientDTO()
 	{
 		System.out.println("patientDTO constructor created");
@@ -54,4 +59,11 @@ public class PatientDTO
 	{
 		this.address=address;
 	}
+	public String toString()
+	{
+		return "[PatientDTO : Id="+this.iD+" , Name="+this.name+" ,Gender="+this.gender+" ,Address="+this.address+" , ContactNo="+this.contactNo+"]";
+	}
 }
+
+
+
