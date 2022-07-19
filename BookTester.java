@@ -4,25 +4,25 @@ class BookTester
 	public static void main(String a[])
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter size of the books");
+		System.out.print("Enter size of the books : ");
 		int size = sc.nextInt();		
-		Library lb = new Library(size);
+		LibraryInt lb = new LibraryImp(size);
 		for(int i=0;i<size;i++)
 		{
 			
-			System.out.println("Enter ID of the book");
+			System.out.print("Enter ID of the book : ");
 			int id=sc.nextInt();
 			
-			System.out.println("Enter name of the book");
+			System.out.print("Enter name of the book : ");
 			String name=sc.next();
 			
-			System.out.println("Enter name of the Author");
+			System.out.print("Enter name of the Author : ");
 			String author=sc.next();
 			
-			System.out.println("Enter the year of publish");
+			System.out.print("Enter the year of publish : ");
 			String publishedIn=sc.next();
 			
-			System.out.println("Enter stream of the book");
+			System.out.print("Enter stream of the book : ");
 			String stream=sc.next();
 			
 			BookDTO bk = new BookDTO();
@@ -41,7 +41,7 @@ class BookTester
 			System.out.println("Enter 4 to delete book contactNo by author");
 			
 			
-			System.out.println("Enter the choice");
+			System.out.println("Enter the choice : ");
 			int choice = sc.nextInt();
 			
 		switch(choice){
@@ -70,7 +70,7 @@ class BookTester
 			         break;
 				
 		}	
-		System.out.println("Do you want to continue Y/N");				
+		System.out.println("Do you want to continue Y/N : ");				
 			option = sc.next();
 		}
 		while(option.equals("Y"));

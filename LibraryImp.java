@@ -1,14 +1,14 @@
 import java.util.Arrays;
-class Library
+class LibraryImp implements LibraryInt
 {
 	BookDTO[] dtos;
 	int index ;
-	public Library(int size)
+	public LibraryImp(int size)
 	{
 		System.out.println("Constructor created");
 		dtos= new BookDTO[size];
 	}
-	
+	@Override
 	public boolean readAndGrow(BookDTO bk)
 	{
 		boolean books=false;
@@ -24,6 +24,7 @@ class Library
 		}
 		return books;
 	}
+	@Override
 	public void getBooks()
 	{
 		for(int i=0;i<dtos.length;i++)
@@ -31,6 +32,7 @@ class Library
 			System.out.println(dtos[i].getId()+ " : "+dtos[i].getName()+ " : "+dtos[i].getAuthor()+ " : "+dtos[i].getPublishedIn()+ ": "+dtos[i].getStream());
 		}
 	}
+	@Override
 	public boolean updateBookNameById(int id , String name)
 	{
 		boolean updatedName=false;
@@ -49,7 +51,8 @@ class Library
 		}
 		return updatedName;
 	}
-	boolean deleteBookByName(String name)
+	@Override
+	public boolean deleteBookByName(String name)
 	{ 
 		boolean deleteBook=false;
 		int i , j;
@@ -64,8 +67,9 @@ class Library
 		}
 		dtos=Arrays.copyOf(dtos,i);
 		return deleteBook;
-	}	
-	boolean deleteBookByAuthor(String author)
+	}
+    @Override	
+	public boolean deleteBookByAuthor(String author)
 	{ 
 		boolean deleteBook=false;
 		int i , j;

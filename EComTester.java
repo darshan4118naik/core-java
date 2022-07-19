@@ -6,7 +6,7 @@ class EComTester
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Entre the No of item : ");
 		int size =sc.nextInt();
-		E_commerce ec = new E_commerce(size);
+		E_commerceInt ec = new E_commerceImp(size);
 		for(int i=0; i<size;i++)
 		{
 			System.out.print("Enter the ID of item : ");

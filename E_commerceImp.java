@@ -1,12 +1,13 @@
 import java.util.Arrays;
-class E_commerce
+class E_commerceImp implements E_commerceInt
 {
 	OrderDTO[] dtos;
 	int index;
-	public E_commerce(int size)
+	public E_commerceImp(int size)
 	{
 		dtos=new OrderDTO[size];
 	}
+	@Override
 	public boolean shopping(OrderDTO odr)
 	{
 		boolean cart= false;
@@ -18,6 +19,7 @@ class E_commerce
 		}
 		return cart;
 	}
+	@Override
 	public void getItem()
 	{
 		for(int i=0;i<dtos.length;i++)
@@ -26,7 +28,8 @@ class E_commerce
 			System.out.println(dtos[i]);
 		}
 	}
-	boolean updateTypeById(int id , String type)
+	@Override
+	public boolean updateTypeById(int id , String type)
 	{
 		boolean updateType=false;
 		for(int i=0;i<dtos.length;i++)
@@ -40,7 +43,8 @@ class E_commerce
 		}
 		return updateType;
 	}
-	boolean deleteOrderByType(String type)
+	@Override
+	public boolean deleteOrderByType(String type)
 	{ 
 		boolean deleteOrder=false;
 		int i , j;
@@ -57,7 +61,8 @@ class E_commerce
 		dtos=Arrays.copyOf(dtos,i);
 		return deleteOrder;
 	}
-	boolean deleteOrderByName(String name)
+	@Override
+	public boolean deleteOrderByName(String name)
 	{ 
 		boolean deleteOrder=false;
 		int i , j;
@@ -74,8 +79,8 @@ class E_commerce
 		dtos=Arrays.copyOf(dtos,i);
 		return deleteOrder;
 	}
-	
-	String getOrderNameById(int id)
+	@Override
+	public String getOrderNameById(int id)
 	{
 		String name=null;
 		for(int i=0;i<dtos.length;i++)
@@ -86,8 +91,8 @@ class E_commerce
 		}
 		return name;
 	}
-	
-	String getOrderTypeByName(String name)
+	@Override
+	public String getOrderTypeByName(String name)
 	{
 		String type=null;
 		for(int i=0;i<dtos.length;i++){

@@ -3,18 +3,18 @@ class HotelTester{
 	
 	public static void main(String a[]){
 		Scanner sc =new Scanner(System.in);
-		System.out.println("No of items to be added");
+		System.out.print("No of items to be added  : ");
 		int size = sc.nextInt();
 		
-		Hotel ht = new Hotel(size);
+		HotelInt ht = new HotelImp(size);
 		for(int i=0;i<size;i++){
-			System.out.println("enter id");
+			System.out.print("enter id : ");
 			int id = sc.nextInt();
-			System.out.println("Enter type");
+			System.out.print("Enter type : ");
 			String type = sc.next();
-			System.out.println("Enter name");
+			System.out.print("Enter name : ");
 			String name = sc.next();
-			System.out.println("enter price");
+			System.out.print("enter price : ");
 			int price =sc.nextInt();
 		
 		
@@ -45,39 +45,39 @@ class HotelTester{
 			case 1 : ht.getMenu();
 			         break;
 					 
-			case 2 : System.out.println("enter existing id");
+			case 2 : System.out.print("enter existing id : ");
 		             int existingId = sc.nextInt();
-		             System.out.println("enter new name");
+		             System.out.print("enter new name : ");
 		             String updatedName = sc.next();
 		             ht.updateNamesById(existingId,updatedName);
 					 break;
 					 
 			case 3 : System.out.print("Enter existing name : ");
 		             String existingName = sc.next();
-		             System.out.println("enter new price");
+		             System.out.print("enter new price : ");
 		             int newPrice = sc.nextInt();
 		             ht.updatePriceByName(existingName,newPrice);
 					 break;
-			case 4 : System.out.println("enter existing name");
+			case 4 : System.out.print("enter existing name : ");
 		             String name1 = sc.next();
 		             ht.deleteByName(name1);
 					 break;
 					 
-			case 5 : System.out.println("enter existing name");
+			case 5 : System.out.print("enter existing name : ");
 		             String name2 = sc.next();
 		             ht.deleteByType(name2);
 					 break;
 			
-			case 6 : System.out.println("enter existing name");
+			case 6 : System.out.println("enter existing name : ");
 		             int id1 = sc.nextInt();
 		             ht.getFoodNameById(id1);
 					 break;
 					 
-			default : System.out.println("Enter the proper number");
+			default : System.out.print("Enter the proper number : ");
 			         break;
 				
 		}	
-		System.out.println("Do you want to continue Y/N");				
+		System.out.print("Do you want to continue Y/N : ");				
 			option = sc.next();
 		}
 		while(option.equals("Y"));

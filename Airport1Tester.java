@@ -6,7 +6,7 @@ class Airport1Tester{
 		System.out.println("terminals");
 		int size = sc.nextInt();
 		
-		Airport1 a1 = new Airport1(size);
+		Airport1 a1 = new Airport1Impl(size);
 		for(int i=0;i<size;i++){
 		System.out.println("enter id");
 		int id = sc.nextInt();
@@ -42,14 +42,14 @@ class Airport1Tester{
 			int choice = sc.nextInt();
 			
 		switch(choice){
-			case 1 : ht.getPatientDetails();
+			case 1 : a1.getTerminalDetails();
 			         break;
 					 
 			case 2 : System.out.println("enter existing id");
 		             int existingId = sc.nextInt();
 		             System.out.println("enter new name");
 		             String updatedName = sc.next();
-		             a1.updateNamesById(existingId,updatedName);*/
+		             a1.updateNamesById(existingId,updatedName);
 					 break;
 					 
 			case 3 : System.out.println("enter type");
@@ -58,7 +58,7 @@ class Airport1Tester{
 					 break;
 				
 					 
-			case 4   System.out.println("enter name");
+			case 4 : System.out.println("enter name");
 		             String name=sc.next();
 		             a1.deleteByAirportName(name);
 					 break;
