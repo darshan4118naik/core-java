@@ -11,6 +11,12 @@ public class Wrapper {
  	   long id4 = id.longValue();
  	   float id5 = id.floatValue();
  	   double id6 = id.doubleValue();
+ 	   
+ 	  System.out.println(id == id.longValue());
+ 	 	System.out.println(id == id.byteValue());
+ 	 	System.out.println(id==id.shortValue());
+ 	 	System.out.println(id==id.floatValue());
+ 	 	System.out.println(id==id.doubleValue());
  	 
  	   System.out.println(id1+"  "+id2+"  "+id3+"  "+id4+"  "+id5+"  "+id6);
  	   
@@ -22,6 +28,12 @@ public class Wrapper {
  	   float idL5 = idL.floatValue();
  	   double idL6 = idL.doubleValue();
  	   
+ 	  System.out.println(idL==idL.intValue());
+ 	 	System.out.println(idL==idL.byteValue());
+ 	 	System.out.println(idL==idL.shortValue());
+ 	 	System.out.println(idL==idL.floatValue());
+ 	 	System.out.println(idL==idL.doubleValue());
+ 	   
  	   System.out.println(idL1+"  "+idL2+"  "+idL3+"  "+idL4+"  "+idL5+"  "+idL6);
  	   
  	   Byte idB = 24;
@@ -31,6 +43,12 @@ public class Wrapper {
  	   long idB4 = idB.longValue();
  	   float idB5 = idB.floatValue();
  	   double idB6 = idB.doubleValue();
+ 	   
+ 	  System.out.println(idB==idB.intValue());
+ 	 	System.out.println(idB==idB.shortValue());
+ 	 	System.out.println(idB== idB.longValue());
+ 	 	System.out.println(idB==idB.floatValue());
+ 	 	System.out.println(idB==idB.doubleValue());
 
  	   System.out.println(idB1+"  "+idB2+"  "+idB3+"  "+idB4+"  "+idB5+"  "+idB6);
  	   
@@ -41,6 +59,12 @@ public class Wrapper {
  	   long idS4 = idS.longValue();
  	   float idS5 = idS.floatValue();
  	   double idS6 = idS.doubleValue();
+ 	   
+ 	  System.out.println(idS==idS.doubleValue());
+ 	 	System.out.println(idS==idS.intValue());
+ 	 	System.out.println(idS== idS.longValue());
+ 	 	System.out.println(idS==idS.byteValue());
+ 	 	System.out.println(idS==idS.floatValue());
 
  	   System.out.println(idS1+"  "+idS2+"  "+idS3+"  "+idS4+"  "+idS5+"  "+idS6);
  	   
@@ -51,6 +75,8 @@ public class Wrapper {
  	   long idF4 = idF.longValue();
  	   float idF5 = idF.floatValue();
  	   double idF6 = idF.doubleValue();
+ 	   
+ 	   
      
  	   System.out.println(idF1+"  "+idF2+"  "+idF3+"  "+idF4+"  "+idF5+"  "+idF6);
  	   
@@ -61,6 +87,12 @@ public class Wrapper {
  	   long idD4 = idD.longValue();
  	   float idD5 = idD.floatValue();
  	   double idD6 = idD.doubleValue();
+ 	   
+ 	  System.out.println(idD==idD.shortValue());
+ 	 	System.out.println(idD==idD.longValue());
+ 	 	System.out.println(idD==idD.intValue());
+ 	 	System.out.println(idD==idD.byteValue());
+ 	 	System.out.println(idD==idD.floatValue());
 
  	   System.out.println(idD1+"  "+idD2+"  "+idD3+"  "+idD4+"  "+idD5+"  "+idD6);
  	   
@@ -71,45 +103,6 @@ public class Wrapper {
  	   double ch4 = ch.charValue();
  	   
  	System.out.println(ch1+" "+ch2+" "+ch3+" "+ch4);
-    
- 	System.out.println(id == idL.longValue());
- 	System.out.println(id == idB.byteValue());
- 	System.out.println(id==idS.shortValue());
- 	System.out.println(id==idF.floatValue());
- 	System.out.println(id==idD.doubleValue());
- 	
- 	System.out.println(idL==id.intValue());
- 	System.out.println(idL==idB.byteValue());
- 	System.out.println(idL==idS.shortValue());
- 	System.out.println(idL==idF.floatValue());
- 	System.out.println(idL==idD.doubleValue());
- 	
- 	System.out.println(idB==id.intValue());
- 	System.out.println(idB==idS.shortValue());
- 	System.out.println(idB== idL.longValue());
- 	System.out.println(idB==idF.floatValue());
- 	System.out.println(idB==idD.doubleValue());
- 	
- 	System.out.println(idS==idD.doubleValue());
- 	System.out.println(idS==id.intValue());
- 	System.out.println(idS== idL.longValue());
- 	System.out.println(idS==idB.byteValue());
- 	System.out.println(idS==idF.floatValue());
- 	
- 	System.out.println(idF==idD.doubleValue());
- 	System.out.println(idF==id.intValue());
- 	System.out.println(idF==idL.longValue());
- 	System.out.println(idF==idB.byteValue());
- 	System.out.println(idF==idS.shortValue());
- 	
- 	System.out.println(idD==idS.shortValue());
- 	System.out.println(idD==idL.longValue());
- 	System.out.println(idD==id.intValue());
- 	System.out.println(idD==idB.byteValue());
- 	System.out.println(idD==idF.floatValue());
- 	
- 	
- 	
 	}
 
 
